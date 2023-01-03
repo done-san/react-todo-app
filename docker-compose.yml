@@ -6,8 +6,19 @@ services:
       context: ./
       dockerfile: ./Dockerfile
     command: >
-      bash -c "yarn dev --host"
+      bash -c "yarn dev --host 0.0.0.0"
     volumes:
       - ./:/react-todo-app
     ports: 
       - "3000:3000"
+  
+  json-server:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    command: >
+      bash -c "yarn mock --host 0.0.0.0"
+    volumes:
+      - ./:/react-todo-app
+    ports:
+      - "3100:3100"

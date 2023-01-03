@@ -7,4 +7,4 @@ RUN apk update && \
 COPY ./ /react-todo-app/
 WORKDIR /react-todo-app
 
-RUN yarn install 
+RUN yarn install

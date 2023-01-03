@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "mock": "./node_modules/json-server/lib/cli/bin.js --watch db.json -p 3100"
   },
   "dependencies": {
     "axios": "^1.2.2",
+    "json-server": "^0.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ulid": "^2.3.0"
