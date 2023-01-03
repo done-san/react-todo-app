@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  react:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    command: >
+      bash -c "yarn dev --host"
+    volumes:
+      - ./:/react-todo-app
+    ports: 
+      - "3000:3000"

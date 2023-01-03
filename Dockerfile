@@ -4,5 +4,7 @@ RUN apk update && \
   apk upgrade && \
   apk add --no-cache vim yarn bash
 
-COPY ./ /react_test_app/
-WORKDIR /react_test_app/
+COPY ./ /react-todo-app/
+WORKDIR /react-todo-app
+
+RUN yarn install
