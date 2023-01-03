@@ -1,8 +1,8 @@
-FROM node:18-bullseye-slim
+FROM node:18.4.0-alpine
 
 RUN apk update && \
-    apk upgrade && \
-    apk add --no-chache vim yarn bash
+  apk upgrade && \
+  apk add --no-cache vim yarn bash
 
-COPY ./ /react-todo-app/
-WORKDIR /react-todo-app/
+COPY ./ /react_test_app/
+WORKDIR /react_test_app/
